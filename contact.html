@@ -82,59 +82,48 @@
             </div>
 
         </div>
+        <form id="contact-form">
 
-        <div class="contact-form">
-            <form id="contact-form">
-                <div class="field">
-                    <label for="name">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="John Doe"
-                        required>
+    <div class="field">
+        <label>Name</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="John Doe"
+            required>
+    </div>
 
-                    <p class="field-error">
-                        Please enter your name.
-                    </p>
-                </div>
+    <div class="field">
+        <label>Email</label>
+        <input
+            type="email"
+            id="email"
+            placeholder="you@gmail.com"
+            required>
+    </div>
 
-                <div class="field">
-                    <label for="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="jane@example.com"
-                        required>
+    <div class="field">
 
-                    <p class="field-error">
-                        Please enter a valid email address.
-                    </p>
-                </div>
+        <label>Subject</label>
 
-                <div class="field">
-                    <label for="subject">Subject</label>
-                    <select
-                        id="subject"
-                        name="subject"
-                        required>
+        <select id="subject">
 
-                        <option value="">Choose a subject...</option>
-                        <option value="General Enquiry">
-                            General Enquiry
-                        </option>
-                        <option value="Report a Listing">
-                            Report a Listing
-                        </option>
-                        <option value="Technical Issue">
-                            Technical Issue
-                        </option>
-                        <option value="Partnership">
-                            Partnership
-                        </option>
-                    </select>
+            <option value="">Choose...</option>
 
+            <option>General Enquiry</option>
+
+            <option>Report a Listing</option>
+
+            <option>Technical Issue</option>
+
+            <option>Partnership</option>
+
+        </select>
+
+    </div>
+
+
+   
                     <p class="field-error">
                         Please choose a subject.
                     </p>
@@ -153,16 +142,17 @@
                         Message should contain at least 10 characters.
                     </p>
                 </div>
-                <button
-                    type="submit"
-                    class="btn btn-primary">
-                    Send Message
-                </button>
-                <div
-                    class="form-status"
-                    id="form-status">
-                </div>
-            </form>
+                 <button class="btn-primary">
+        Send Message
+        </button>
+<button type="reset" class="btn btn-secondary" id="resetForm">
+        Reset Form
+    </button>
+
+    <div id="form-status"></div>
+
+    </form>
+
         </div>
     </section>
 
@@ -179,6 +169,24 @@
         </p>
 
     </footer>
+
+<div id="resetModal" class="modal">
+    <div class="modal-content">
+        <h2>Reset Form?</h2>
+        <p>
+            All the information you've entered will be permanently cleared.
+        </p>
+        <div class="modal-buttons">
+            <button id="cancelReset" class="btn btn-secondary">
+                Cancel
+            </button>
+
+            <button id="confirmReset" class="btn btn-danger">
+                Reset Form
+            </button>
+        </div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 
