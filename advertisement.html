@@ -4,73 +4,264 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advertisements</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<header>
+    <div class="logo">
+        <h1>Ad-Spot</h1>
+    </div>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="advertisement.html">Ads</a>
-        <a href="contact.html">Contact</a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="advertisement.html">Browse Ads</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-    
-    <div class="card" data-category="Entertainment">
-        <h1>🎧Music streaming pro</h1>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7NE_jt-SRV-oeGWg9WAIsXO5cPBU5gBmL-cWOO7_Zg&s=10" alt="music streaming pro">
-        <p><b>3 months free for new users!</b></p>
-        <button>Start listening</button>
-    </div>
         
-    <div class="card" data-category="Electronics">
-        <h2>Gaming headsets</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIt9iUhj7CtEuKb-OaGrjXqobazMJXpyM4F-2wJ_-hmw&s=10" alt="for gamers">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBAp1lfxSehZMtHJsZWQemJycz27YemItwsmVVOaY1tg&s=10" alt="for gamers">
-        <p><strong>Price: ksh1200</strong></p>
-        <button>Add to Cart</button>
-    </div>
-    
-     <div class="card" data-category="cars">
-        <div class="img-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcJIjY4aX1kj2bl05JP_lGF_TuqGIlkYGLmmna69mjnQ&s=10" alt="cars">
-            <div class="details">
-                <p><strong>Price: ksh7M</strong></p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-     </div>
+</header>
+    <body>
+    <h2>Browse Advertisements</h2>
+        <p>
+            Find amazing products and services from trusted sellers across different categories.
+        </p>
 
-     <div class="card" data-category="food">
-        <div class="img-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4aCogxcnZ-PI0BWi0KMvPsg3gU08uWxXPrV6EtVBXXQ&s=10" alt=" pizza">
-            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5gG1nFRstQNdqkM87quLy-iPOf-0NuLAqyn-P0Jxs-Q&s=10" alt=" pizza">
-            <div class="details">
-                <p>Buy 1 large pizza, Get 1 free! Every Friday 6pm-10pm. Delievery available</p>
-                <p><strong>Price: ksh890</strong></p>
-                <button>Contact business</button>
-            </div>
-        </div>
-     </div>
+        <section class="search-section">
+        <form>
+            <input
+                type="text"
+                placeholder="Search products or services...">
 
-     <div class="card" data-category="Clothing">
-        <div class="img-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfjNGb91DefOfL5HVLks4zU5X9TGBobKaRtZSU5_waQ&s=10" alt="leather jackets">
-            <div class="details">
-                <p><b>Price: ksh3000</b></p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-     </div>
-      
-     <div class="card" data-category="shoes">
-        <div class="img-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwA-uvF3hrLzpf3g4cD6Ox4pvUINkgd-59Se-cHaX7CQ&s=10" alt="sneakers">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwSYl6gikS13dzN_26GnRF8LMW9BgS4E0urLiSUQC8Cw&s=10" alt="sneakers">
-            <div class="details">
-                <p>buy now with a discount</p>
-                <p><strong>Price: ksh1500</strong></p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
+            <select>
+                <option>All Categories</option>
+                <option>Electronics</option>
+                <option>Entertainment</option>
+                <option>Vehicles</option>
+                <option>Food</option>
+                <option>Clothing</option>
+                <option>Shoes</option>
+            </select>
 
+            <select>
+                <option>Sort By</option>
+                <option>Latest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+            </select>
+
+            <button type="submit">
+                Search
+            </button>
+        </form>
+    </section>
+
+    <section class="ads-container">
+        <article class="card">
+
+            <span class="badge featured">
+                Featured
+            </span>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7NE_jt-SRV-oeGWg9WAIsXO5cPBU5gBmL-cWOO7_Zg&s=10"
+                 alt="Music Streaming">
+
+            <div class="card-content">
+                <h3>Music Streaming Pro</h3>
+                <p>
+                    Enjoy unlimited music streaming with 3 months FREE for new users.
+                </p>
+                <p class="price">
+                    Free Trial
+                </p>
+                <p class="location">
+                    📍 Online
+                </p>
+
+                <div class="buttons">
+                    <button class="primary">
+                        Subscribe Now
+                    </button>
+
+                    <button class="secondary">
+                        Favorite
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+
+            <span class="badge sale">
+                Sale
+            </span>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIt9iUhj7CtEuKb-OaGrjXqobazMJXpyM4F-2wJ_-hmw&s=10"
+                 alt="Gaming Headset">
+
+            <div class="card-content">
+
+                <h3>Gaming Headset</h3>
+                <p>
+                    High-quality surround sound gaming headset with microphone.
+                </p>
+                <p class="price">
+                    KSh 1,200
+                </p>
+                <p class="location">
+                    📍 Nairobi
+                </p>
+
+                <div class="buttons">
+                    <button class="primary">
+                        Buy Now
+                    </button>
+
+                    <button class="secondary">
+                        Favorite
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcJIjY4aX1kj2bl05JP_lGF_TuqGIlkYGLmmna69mjnQ&s=10"
+                 alt="Luxury Car">
+
+            <div class="card-content">
+
+                <h3>Luxury SUV</h3>
+                <p>
+                    Premium SUV in excellent condition with low mileage.
+                </p>
+                <p class="price">
+                    KSh 7,000,000
+                </p>
+                <p class="location">
+                    📍 Nairobi
+                </p>
+
+                <div class="buttons">
+                    <button class="primary">
+                        Buy Now
+                    </button>
+
+                    <button class="secondary">
+                        Favorite
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+
+            <span class="badge hot">
+                Hot Deal
+            </span>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4aCogxcnZ-PI0BWi0KMvPsg3gU08uWxXPrV6EtVBXXQ&s=10"
+                 alt="Pizza">
+
+            <div class="card-content">
+                <h3>Pizza Friday Offer</h3>
+
+                <p>
+                    Buy one large pizza and get another one absolutely FREE.
+                </p>
+                <p class="price">
+                    KSh 890
+                </p>
+
+                <p class="location">
+                    📍 Nairobi
+                </p>
+
+                <div class="buttons">
+
+                    <button class="primary">
+                        Order Now
+                    </button>
+
+                    <button class="secondary">
+                        Contact Business
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfjNGb91DefOfL5HVLks4zU5X9TGBobKaRtZSU5_waQ&s=10"
+                 alt="Leather Jacket">
+
+            <div class="card-content">
+
+                <h3>Leather Jacket</h3>
+
+                <p>
+                    Stylish premium leather jacket available in different sizes.
+                </p>
+
+                <p class="price">
+                    KSh 3,000
+                </p>
+
+                <p class="location">
+                    📍 Nairobi
+                </p>
+
+                <div class="buttons">
+
+                    <button class="primary">
+                        Buy Now
+                    </button>
+
+                    <button class="secondary">
+                        Favorite
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwA-uvF3hrLzpf3g4cD6Ox4pvUINkgd-59Se-cHaX7CQ&s=10"
+                 alt="Sneakers">
+
+            <div class="card-content">
+
+                <h3>Premium Sneakers</h3>
+                <p>
+                    Comfortable sneakers with a limited-time discount.
+                </p>
+                <p class="price">
+                    KSh 1,500
+                </p>
+
+                <p class="location">
+                    Nairobi
+                </p>
+                <div class="buttons">
+                    <button class="primary">
+                        Buy Now
+                    </button>
+                    <button class="secondary">
+                        Favorite
+                    </button>
+
+                </div>
+            </div>
+        </article>
+    </section>
         <footer>
         <p>&copy; 2026 Ad-Spot. All Rights Reserved.</p>
         </footer>
