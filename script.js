@@ -288,110 +288,201 @@ function categoryFilter(){
 
 }
 
-/*FAVORITES*/
+/*CONTACT FORM*/
 
-function favorites(){
+contactForm();
 
-    let favorites=
+function contactForm(){
 
-    JSON.parse(localStorage.getItem("favorites"))||[];
+    const form=document.getElementById("contact-form");
 
-    updateFavoriteCounter();
+    if(!form) return;
 
-    document.querySelectorAll(".favorite-btn").forEach((button,index)=>{
+    form.addEventListener("submit",saveReport);
 
-        button.addEventListener("click",()=>{
+}
 
-            const card=button.closest(".card");
+function saveReport(e){
 
-            const item={
+    e.preventDefault();
 
-                name:card.dataset.name,
+    const report={
 
-                price:card.dataset.price,
+        id:Date.now(),
 
-                category:card.dataset.category
+        name:document.getElementById("name").value,
 
-            };
+        email:document.getElementById("email").value,
 
-            favorites.push(item);
+        subject:document.getElementById("subject").value,
 
-            localStorage.setItem("favorites",
+        message:document.getElementById("message").value,
 
-            JSON.stringify(favorites));
+        date:new Date().toLocaleString()
 
-            updateFavoriteCounter();
+    };
 
-            button.innerHTML="❤️ Saved";
+    let reports=
 
-        });
+    JSON.parse(localStorage.getItem("reports"))||[];
+
+    reports.push(report);
+
+    localStorage.setItem(
+
+        "reports",
+
+        JSON.stringify(reports)
+
+    );
+
+    document.getElementById("form-status").innerHTML=
+
+    "✅ Report submitted successfully.";
+
+    form.reset();
+
+}
+
+/*ADMIN DASHBOARD*/
+
+loadReports();
+
+function loadReports(){
+
+    const table=document.getElementById("reportTable");
+
+    if(!table) return;
+
+    const reports=
+
+    JSON.parse(localStorage.getItem("reports"))||[];
+
+    table.innerHTML="";
+
+    reports.forEach(report=>{
+
+        table.innerHTML+=`
+
+        <tr>
+
+        <td>${report.name}</td>
+
+        <td>${report.email}</td>
+
+        <td>${report.subject}</td>
+
+        <td>${report.message}</td>
+
+        <td>${report.date}</td>
+
+        <td>
+
+        <button onclick="deleteReport(${report.id})">
+
+        Delete
+
+        </button>
+
+        </td>
+
+        </tr>
+
+        `;
 
     });
 
-}
+    document.getElementById("totalReports").textContent=
 
-function updateFavoriteCounter(){
+    reports.length;
 
-    const count=document.getElementById("favoriteCount");
-
-    if(!count) return;
-
-    const favorites=
-
-    JSON.parse(localStorage.getItem("favorites"))||[];
-
-    count.textContent=favorites.length;
+    updateDashboard(reports);
 
 }
 
-/*CART*/
+function updateDashboard(reports){
 
-function shoppingCart(){
+    let general=0;
 
-    let cart=
+    let listing=0;
 
-    JSON.parse(localStorage.getItem("cart"))||[];
+    let technical=0;
 
-    updateCartCounter();
+    reports.forEach(report=>{
 
-    document.querySelectorAll(".cart-btn").forEach(button=>{
+        if(report.subject==="General Enquiry")
 
-        button.addEventListener("click",()=>{
+            general++;
 
-            const card=button.closest(".card");
+        if(report.subject==="Report a Listing")
 
-            cart.push({
+            listing++;
 
-                name:card.dataset.name,
+        if(report.subject==="Technical Issue")
 
-                price:card.dataset.price
-
-            });
-
-            localStorage.setItem("cart",
-
-            JSON.stringify(cart));
-
-            updateCartCounter();
-
-            button.innerHTML="✔ Added";
-
-        });
+            technical++;
 
     });
 
+    document.getElementById("generalReports").textContent=
+
+    general;
+
+    document.getElementById("listingReports").textContent=
+
+    listing;
+
+    document.getElementById("technicalReports").textContent=
+
+    technical;
+
 }
 
-function updateCartCounter(){
+function deleteReport(id){
 
-    const counter=document.getElementById("cartCount");
+    let reports=
 
-    if(!counter) return;
+    JSON.parse(localStorage.getItem("reports"))||[];
 
-    const cart=
+    reports=reports.filter(
 
-    JSON.parse(localStorage.getItem("cart"))||[];
+        report=>report.id!==id
 
-    counter.textContent=cart.length;
+    );
+
+    localStorage.setItem(
+
+        "reports",
+
+        JSON.stringify(reports)
+
+    );
+
+    loadReports();
+
+}
+
+/*RESET CONTACT FORM*/
+
+const resetButton = document.getElementById("resetForm");
+
+if(resetButton){
+
+    resetButton.addEventListener("click", function(){
+
+        const confirmed = confirm(
+            "Are you sure you want to clear the form?"
+        );
+
+        if(!confirmed){
+
+            event.preventDefault();
+            return;
+
+        }
+
+        document.getElementById("form-status").innerHTML = "";
+
+    });
 
 }
