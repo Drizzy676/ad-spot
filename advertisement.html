@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertisements</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+    <div class="logo">
+        <h1>Ad-Spot</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="advertisement.html">Browse Ads</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+
+        <a class="nav-fav">
+        ❤️
+        <span id="favoriteCount">
+        0
+        </span>
+        </a>
+
+        <a class="nav-cart">
+        🛒
+        <span id="cartCount">
+        0
+        </span>
+        </a>
+        </div>
+        
+    </nav>
+        
+</header>
+    <section class="page-banner">
+    <h2>Browse Advertisements</h2>
+        <p>
+            Find amazing products and services from trusted sellers across different categories.
+        </p>
+    </section>
+
+        <section class="search-section">
+        <form>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products or services...">
+            
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="vehicles">Vehicles</option>
+                <option value="food">Food</option>
+                <option value="clothing">Clothing</option>
+                <option value="shoes">Shoes</option>
+            </select>
+            
+            <select id="sortAds">
+                <option value="default">Sort By</option>
+                <option value="low">Price: Low → High</option>
+                <option value="high">Price: High → Low</option>
+            </select>
+
+            <button type="submit">
+                Search
+            </button>
+        </form>
+    </section>
+
+    <section class="ads-container">
+        <article 
+        class="card"
+        data-category="entertainment"
+        data-price="450"
+        data-name="Music Streaming Pro">
+            <span class="badge featured">
+                Featured
+            </span>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7NE_jt-SRV-oeGWg9WAIsXO5cPBU5gBmL-cWOO7_Zg&s=10"
+                 alt="Music Streaming">
+
+            <div class="card-content">
+                <h3>Music Streaming Pro</h3>
+                <p>
+                    Enjoy unlimited music streaming with 3 months FREE for new users.
+                </p>
+                <p class="price">
+                    Free Trial
+                </p>
+                <p class="location">
+                    📍 Online
+                </p>
+
+                <div class="buttons">
+                    <button class="primary details-btn">
+                        Add to Cart
+                    </button>
+
+                    <button class="secondary favorite-btn">
+                        Favorite
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article 
+        class="card"
+            data-category="electronics"
+            data-price="1200"
+            data-name="Gaming Headset">
+
+            <span class="badge sale">
+                Sale
+            </span>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIt9iUhj7CtEuKb-OaGrjXqobazMJXpyM4F-2wJ_-hmw&s=10"
+                 alt="Gaming Headset">
+
+            <div class="card-content">
+
+                <h3>Gaming Headset</h3>
+                <p>
+                    High-quality surround sound gaming headset with microphone.
+                </p>
+                <p class="price">
+                    KSh 1,200
+                </p>
+                <p class="location">
+                    📍 Nairobi
+                </p>
+
+                <div class="buttons">
+                    <button class="primary details-btn">
+                        Add to Cart
+                    </button>
+
+                    <button class="secondary favorite-btn">
+                        Favorite
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article 
+        class="card"
+            data-category="vehicles"
+            data-price="7000000"
+            data-name="Luxury SUV">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcJIjY4aX1kj2bl05JP_lGF_TuqGIlkYGLmmna69mjnQ&s=10"
+                 alt="Luxury Car">
+
+            <div class="card-content">
+
+                <h3>Luxury SUV</h3>
+                <p>
+                    Premium SUV in excellent condition with low mileage.
+                </p>
+                <p class="price">
+                    KSh 7,000,000
+                </p>
+                <p class="location">
+                    📍 Nairobi
+                </p>
+
+                <div class="buttons">
+                    <button class="primary details-btn">
+                        Add to Cart
+                    </button>
+
+                    <button class="secondary favorite-btn">
+                        Favorite
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article 
+        class="card"
+            data-category="food"
+            data-price="890"
+            data-name="Pizza Friday Offer">
+
+            <span class="badge hot">
+                Hot Deal
+            </span>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4aCogxcnZ-PI0BWi0KMvPsg3gU08uWxXPrV6EtVBXXQ&s=10"
+                 alt="Pizza">
+
+            <div class="card-content">
+                <h3>Pizza Friday Offer</h3>
+
+                <p>
+                    Buy one large pizza and get another one absolutely FREE.
+                </p>
+                <p class="price">
+                    KSh 890
+                </p>
+
+                <p class="location">
+                    📍 Nairobi
+                </p>
+
+                <div class="buttons">
+
+                    <button class="primary details-btn">
+                        Add to Cart
+                    </button>
+
+                    <button class="secondary favorite-btn">
+                        Contact Business
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    <article 
+    class="card"
+        data-category="clothing"
+        data-price="3500"
+        data-name="Leather Jacket">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfjNGb91DefOfL5HVLks4zU5X9TGBobKaRtZSU5_waQ&s=10"
+                alt="Leather Jacket">
+
+        <div class="card-content">
+
+            <h3>Leather Jacket</h3>
+
+            <p>
+                Stylish premium leather jacket available in different sizes.
+            </p>
+
+            <p class="price">
+                KSh 3,500
+            </p>
+
+            <p class="location">
+                📍 Nairobi
+            </p>
+
+            <div class="buttons">
+
+                <button class="primary details-btn">
+                    Add to Cart
+                </button>
+
+                <button class="secondary favorite-btn">
+                    Favorite
+                </button>
+            </div>
+        </div>
+    </article>
+
+        <article 
+        class="card"
+            data-category="shoes"
+            data-price="1500"
+            data-name="Premium Sneakers">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwA-uvF3hrLzpf3g4cD6Ox4pvUINkgd-59Se-cHaX7CQ&s=10"
+                 alt="Sneakers">
+
+            <div class="card-content">
+
+                <h3>Premium Sneakers</h3>
+                <p>
+                    Comfortable sneakers with a limited-time discount.
+                </p>
+                <p class="price">
+                    KSh 1,500
+                </p>
+
+                <p class="location">
+                    Nairobi
+                </p>
+                <div class="buttons">
+                    <button class="primary details-btn">
+                        add to Cart
+                    </button>
+                    <button class="secondary favorite-btn">
+                        Favorite
+                    </button>
+
+                </div>
+            </div>
+        </article>
+    </section>
+        <footer>
+        <p>&copy; 2026 Ad-Spot. All Rights Reserved.</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="advertisement.html">Browse Ads</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
