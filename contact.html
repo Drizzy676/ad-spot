@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+</head>
+<body data-page="contact">
+    <header class="site-header">
+    <div class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>Ad-Spot</a>
+        <nav class="main-nav">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="advertisement.html" data-page="browse">Browse Ads</a>
+        <a href="about.html" data-page="about">About</a>
+        <a href="contact.html" data-page="contact">Contact</a>
+        </nav>
+    <div class="header-actions">
+        <a class="nav-fav" href="advertisement.html#favorites" title="Your favorites">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.1C.4 8.5 2 5 5.4 5c2 0 3.3 1 4.6 2.7C11.3 6 12.6 5 14.6 5 18 5 19.6 8.5 22 11.9 19.5 16.4 12 21 12 21z"/></svg>
+        <span id="nav-fav-count">0</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+</div>
+</header>
+
+<section class="page-hero">
+    <div class="wrap">
+        <p class="eyebrow-mono">// Contact</p>
+        <h1>Questions, feedback, or a bug to report?</h1>
+        <p>Send us a message below, we'll get back to you within one business day.</p>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="wrap contact-layout">
+
+    <div class="contact-card">
+        <h3>Get in touch</h3>
+        <div class="contact-row">
+            <span class="ic">✉️</span>
+            <div><strong>Email</strong><br>hello@ad-spot.example</div>
+        </div>
+        <div class="contact-row">
+            <span class="ic">📞</span>
+            <div><strong>Phone</strong><br>+254 700 000 000</div>
+        </div>
+        <div class="contact-row">
+            <span class="ic">📍</span>
+            <div><strong>Office</strong><br>Nairobi, Kenya</div>
+        </div>
+        <div class="contact-row">
+            <span class="ic">🕘</span>
+            <div><strong>Hours</strong><br>Mon–Fri, 9am–5pm EAT</div>
+        </div>
+    </div>
+
+<form class="pad" id="contact-form" novalidate>
+        <div class="field" style="margin-bottom:18px;">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Wanjiru">
+            <p class="field-error">Please enter your full name.</p>
+        </div>
+
+        <div class="field" style="margin-bottom:18px;">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com">
+            <p class="field-error">Please enter a valid email address.</p>
+        </div>
+
+        <div class="field" style="margin-bottom:18px;">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+            <option value="">Choose a subject…</option>
+            <option value="General enquiry">General enquiry</option>
+            <option value="Report a listing">Report a listing</option>
+            <option value="Technical issue">Technical issue</option>
+            <option value="Partnership">Partnership</option>
+            </select>
+            <p class="field-error">Please choose or enter a subject.</p>
+        </div>
+
+        <div class="field" style="margin-bottom:8px;">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what's up…"></textarea>
+            <p class="field-error">Message should be at least 10 characters.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:14px;">Send message</button>
+        <div class="form-status" id="form-status"></div>
+</form>
+</section>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div>
+                <h4>Ad-Spot</h4>
+                <p style="max-width:32ch;">A responsive advertising platform for finding and posting ads for products and services.</p>
+            </div>
+            <div>
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advertisement.html">Browse Ads</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="advertisement.html?category=electronics">Electronics</a></li>
+                    <li><a href="advertisement.html?category=vehicles">Vehicles</a></li>
+                    <li><a href="advertisement.html?category=property">Property</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Ad-Spot. All Rights Reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
