@@ -20,6 +20,23 @@
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="header-actions">
+
+        <a class="nav-fav">
+        ❤️
+        <span id="favoriteCount">
+        0
+        </span>
+        </a>
+
+        <a class="nav-cart">
+        🛒
+        <span id="cartCount">
+        0
+        </span>
+        </a>
+        </div>
+        
     </nav>
         
 </header>
@@ -32,25 +49,25 @@
 
         <section class="search-section">
         <form>
-            <input
-                type="text"
-                placeholder="Search products or services...">
-
-            <select>
-                <option>All Categories</option>
-                <option>Electronics</option>
-                <option>Entertainment</option>
-                <option>Vehicles</option>
-                <option>Food</option>
-                <option>Clothing</option>
-                <option>Shoes</option>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products or services...">
+            
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="vehicles">Vehicles</option>
+                <option value="food">Food</option>
+                <option value="clothing">Clothing</option>
+                <option value="shoes">Shoes</option>
             </select>
-
-            <select>
-                <option>Sort By</option>
-                <option>Latest</option>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
+            
+            <select id="sortAds">
+                <option value="default">Sort By</option>
+                <option value="low">Price: Low → High</option>
+                <option value="high">Price: High → Low</option>
             </select>
 
             <button type="submit">
@@ -60,8 +77,11 @@
     </section>
 
     <section class="ads-container">
-        <article class="card">
-
+        <article 
+        class="card"
+        data-category="entertainment"
+        data-price="450"
+        data-name="Music Streaming Pro">
             <span class="badge featured">
                 Featured
             </span>
@@ -82,18 +102,22 @@
                 </p>
 
                 <div class="buttons">
-                    <button class="primary">
-                        Subscribe Now
+                    <button class="primary details-btn">
+                        Add to Cart
                     </button>
 
-                    <button class="secondary">
+                    <button class="secondary favorite-btn">
                         Favorite
                     </button>
                 </div>
             </div>
         </article>
 
-        <article class="card">
+        <article 
+        class="card"
+            data-category="electronics"
+            data-price="1200"
+            data-name="Gaming Headset">
 
             <span class="badge sale">
                 Sale
@@ -116,18 +140,22 @@
                 </p>
 
                 <div class="buttons">
-                    <button class="primary">
-                        Buy Now
+                    <button class="primary details-btn">
+                        Add to Cart
                     </button>
 
-                    <button class="secondary">
+                    <button class="secondary favorite-btn">
                         Favorite
                     </button>
                 </div>
             </div>
         </article>
 
-        <article class="card">
+        <article 
+        class="card"
+            data-category="vehicles"
+            data-price="7000000"
+            data-name="Luxury SUV">
 
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcJIjY4aX1kj2bl05JP_lGF_TuqGIlkYGLmmna69mjnQ&s=10"
                  alt="Luxury Car">
@@ -146,18 +174,22 @@
                 </p>
 
                 <div class="buttons">
-                    <button class="primary">
-                        Buy Now
+                    <button class="primary details-btn">
+                        Add to Cart
                     </button>
 
-                    <button class="secondary">
+                    <button class="secondary favorite-btn">
                         Favorite
                     </button>
                 </div>
             </div>
         </article>
 
-        <article class="card">
+        <article 
+        class="card"
+            data-category="food"
+            data-price="890"
+            data-name="Pizza Friday Offer">
 
             <span class="badge hot">
                 Hot Deal
@@ -182,11 +214,11 @@
 
                 <div class="buttons">
 
-                    <button class="primary">
-                        Order Now
+                    <button class="primary details-btn">
+                        Add to Cart
                     </button>
 
-                    <button class="secondary">
+                    <button class="secondary favorite-btn">
                         Contact Business
                     </button>
 
@@ -196,72 +228,49 @@
 
         </article>
 
-                    <article class="card">
-                
-                <h3>HP Laptop</h3>
-                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wfGVufDB8fDB8fHww" alt="Laptop" height="250px" width="250px">
+    <article 
+    class="card"
+        data-category="clothing"
+        data-price="3500"
+        data-name="Leather Jacket">
 
-                <p>Powerful laptop suitable for work and study.</p>
-                <p><strong>Price:</strong> sh45,000</p>
-                <button>Add to Favorites</button>
-            </article>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfjNGb91DefOfL5HVLks4zU5X9TGBobKaRtZSU5_waQ&s=10"
+                alt="Leather Jacket">
 
-            <article class="card">
-                
-                <h3>Toyota Corolla</h3>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Toyota_Corolla_Limousine_Hybrid_Genf_2019_1Y7A5576.jpg/330px-Toyota_Corolla_Limousine_Hybrid_Genf_2019_1Y7A5576.jpg?utm_source=sco.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Toyota Corolla" height="250px" width="250px">
-                <p>Well-maintained vehicle with low mileage.</p>
-                <p><strong>Price:</strong> sh3,000,000</p>
-                <button>Add to Favorites</button>
-            </article>
+        <div class="card-content">
 
-            <article class="card">
-                <h3>3-Bedroom Apartment</h3>
-                <img src="https://propscout.co.ke/storage/properties/files/newly-built-1-bedroom-min-apartment-to-let-in-karen-s3kc2.jpg" alt="a 3-bedroom apartment" height="250px" width="250px">
-                <p>Modern apartment located in a secure neighborhood.</p>
-                <p><strong>Rent:</strong> sh60,000/month</p>
-                <button>Add to Favorites</button>
-            </article>
+            <h3>Leather Jacket</h3>
 
+            <p>
+                Stylish premium leather jacket available in different sizes.
+            </p>
 
-        <article class="card">
+            <p class="price">
+                KSh 3,500
+            </p>
 
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfjNGb91DefOfL5HVLks4zU5X9TGBobKaRtZSU5_waQ&s=10"
-                 alt="Leather Jacket">
+            <p class="location">
+                📍 Nairobi
+            </p>
 
-            <div class="card-content">
+            <div class="buttons">
 
-                <h3>Leather Jacket</h3>
+                <button class="primary details-btn">
+                    Add to Cart
+                </button>
 
-                <p>
-                    Stylish premium leather jacket available in different sizes.
-                </p>
-
-                <p class="price">
-                    KSh 3,000
-                </p>
-
-                <p class="location">
-                    📍 Nairobi
-                </p>
-
-                <div class="buttons">
-
-                    <button class="primary">
-                        Buy Now
-                    </button>
-
-                    <button class="secondary">
-                        Favorite
-                    </button>
-
-                </div>
-
+                <button class="secondary favorite-btn">
+                    Favorite
+                </button>
             </div>
+        </div>
+    </article>
 
-        </article>
-
-        <article class="card">
+        <article 
+        class="card"
+            data-category="shoes"
+            data-price="1500"
+            data-name="Premium Sneakers">
 
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwA-uvF3hrLzpf3g4cD6Ox4pvUINkgd-59Se-cHaX7CQ&s=10"
                  alt="Sneakers">
@@ -280,10 +289,10 @@
                     Nairobi
                 </p>
                 <div class="buttons">
-                    <button class="primary">
-                        Buy Now
+                    <button class="primary details-btn">
+                        add to Cart
                     </button>
-                    <button class="secondary">
+                    <button class="secondary favorite-btn">
                         Favorite
                     </button>
 
