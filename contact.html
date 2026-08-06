@@ -34,8 +34,63 @@
 </section>
 
 
-<section>
-        
+<section class="section">
+    <div class="wrap contact-layout">
+
+    <div class="contact-card">
+        <h3>Get in touch</h3>
+        <div class="contact-row">
+            <span class="ic">✉️</span>
+            <div><strong>Email</strong><br>hello@ad-spot.example</div>
+        </div>
+        <div class="contact-row">
+            <span class="ic">📞</span>
+            <div><strong>Phone</strong><br>+254 700 000 000</div>
+        </div>
+        <div class="contact-row">
+            <span class="ic">📍</span>
+            <div><strong>Office</strong><br>Nairobi, Kenya</div>
+        </div>
+        <div class="contact-row">
+            <span class="ic">🕘</span>
+            <div><strong>Hours</strong><br>Mon–Fri, 9am–5pm EAT</div>
+        </div>
+    </div>
+
+<form class="pad" id="contact-form" novalidate>
+        <div class="field" style="margin-bottom:18px;">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Wanjiru">
+            <p class="field-error">Please enter your full name.</p>
+        </div>
+
+        <div class="field" style="margin-bottom:18px;">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com">
+            <p class="field-error">Please enter a valid email address.</p>
+        </div>
+
+        <div class="field" style="margin-bottom:18px;">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+            <option value="">Choose a subject…</option>
+            <option value="General enquiry">General enquiry</option>
+            <option value="Report a listing">Report a listing</option>
+            <option value="Technical issue">Technical issue</option>
+            <option value="Partnership">Partnership</option>
+            </select>
+            <p class="field-error">Please choose or enter a subject.</p>
+        </div>
+
+        <div class="field" style="margin-bottom:8px;">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what's up…"></textarea>
+            <p class="field-error">Message should be at least 10 characters.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top:14px;">Send message</button>
+        <div class="form-status" id="form-status"></div>
+</form>
 </section>
 </body>
 </html>
