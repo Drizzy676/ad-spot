@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad-Spot | Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>Ad-Spot</h1>
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="advertisement.html">Browse Ads</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <li><a href="admin.html" class="active">Admin</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<section class="page-banner">
+
+    <h2>Admin Dashboard</h2>
+
+    <p>
+        View and manage reports submitted through the contact form.
+    </p>
+
+</section>
+
+<section class="dashboard">
+
+    <div class="dashboard-card">
+
+        <h3>Total Reports</h3>
+
+        <h1 id="totalReports">0</h1>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h3>General Enquiries</h3>
+
+        <h1 id="generalReports">0</h1>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h3>Listing Reports</h3>
+
+        <h1 id="listingReports">0</h1>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <h3>Technical Issues</h3>
+
+        <h1 id="technicalReports">0</h1>
+
+    </div>
+
+</section>
+
+<section class="admin-controls">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search reports...">
+
+    <select id="filterSubject">
+
+        <option value="All">All Subjects</option>
+
+        <option>General Enquiry</option>
+
+        <option>Report a Listing</option>
+
+        <option>Technical Issue</option>
+
+        <option>Partnership</option>
+
+    </select>
+
+    <button id="clearReports">
+        Clear All Reports
+    </button>
+
+</section>
+
+<section class="reports">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Subject</th>
+
+<th>Message</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+</thead>
+<tbody id="reportTable">
+
+</tbody>
+</table>
+</section>
+<footer>
+
+<p>&copy; 2026 Ad-Spot. All Rights Reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
