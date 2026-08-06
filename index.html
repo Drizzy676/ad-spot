@@ -3,245 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ad-Spot - Find and advertise products and services.">
+    <meta name="description" content="Ad-Spot - Search and browse advertisements for products and services.">
     <title>Ad-Spot | Home</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- HEADER  -->
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Ad-Spot</h1>
+        </div>
 
-<header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="browse.html">Browse Ads</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="logo">
-        <h2>Ad-Spot</h2>
-    </div>
+    <!--  Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Find What You Need, Anytime, Anywhere</h2>
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="browse.html">Browse Ads</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+            <p>
+                Welcome to Ad-Spot, your trusted online marketplace where buyers
+                and sellers connect. Search for products and services, discover
+                great deals, and explore advertisements from different categories.
+            </p>
 
-</header>
+            <a href="browse.html" class="btn">Browse Advertisements</a>
+        </div>
+    </section>
 
-<!--  HERO  -->
+    <!--  Search-->
+    <section class="search">
+        <h2>Search Advertisements</h2>
 
-<section class="hero">
+        <form>
+            <input type="text" placeholder="Search products or services...">
 
-    <div class="hero-content">
+            <select>
+                <option>All Categories</option>
+                <option>Electronics</option>
+                <option>Vehicles</option>
+                <option>Property</option>
+                <option>Fashion</option>
+                <option>Jobs</option>
+                <option>Services</option>
+            </select>
 
-        <h1>Find the Best Deals Near You</h1>
+            <input type="text" placeholder="Location">
+
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <!-- Featured Ads -->
+    <section class="featured-ads">
+        <h2>Featured Advertisements</h2>
+
+        <div class="ads">
+
+            <article class="card">
+                <img src="images/laptop.jpg" alt="Laptop Advertisement">
+                <h3>HP Laptop</h3>
+                <p>Powerful laptop suitable for work and study.</p>
+                <p><strong>Price:</strong> $450</p>
+                <button>Add to Favorites</button>
+            </article>
+
+            <article class="card">
+                <img src="images/car.jpg" alt="Car Advertisement">
+                <h3>Toyota Corolla</h3>
+                <p>Well-maintained vehicle with low mileage.</p>
+                <p><strong>Price:</strong> $8,000</p>
+                <button>Add to Favorites</button>
+            </article>
+
+            <article class="card">
+                <img src="images/house.jpg" alt="House Advertisement">
+                <h3>3-Bedroom Apartment</h3>
+                <p>Modern apartment located in a secure neighborhood.</p>
+                <p><strong>Rent:</strong> $600/month</p>
+                <button>Add to Favorites</button>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Us  -->
+    <section class="features">
+        <h2>Why Choose Ad-Spot?</h2>
+
+        <div class="feature-list">
+
+            <div class="feature">
+                <h3>🔍 Easy Search</h3>
+                <p>Quickly search advertisements using keywords, categories, and locations.</p>
+            </div>
+
+            <div class="feature">
+                <h3>⭐ Featured Listings</h3>
+                <p>Discover popular and promoted advertisements on the homepage.</p>
+            </div>
+
+            <div class="feature">
+                <h3>❤️ Save Favorites</h3>
+                <p>Keep track of advertisements you like for future reference.</p>
+            </div>
+
+            <div class="feature">
+                <h3>📱 Responsive Design</h3>
+                <p>Enjoy a seamless experience on mobile, tablet, and desktop devices.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--  Call to Action  -->
+    <section class="cta">
+        <h2>Ready to Find Amazing Deals?</h2>
+        <p>Browse hundreds of advertisements and connect with trusted sellers today.</p>
+
+        <a href="browse.html" class="btn">Explore Ads</a>
+    </section>
+
+    <!--  Footer  -->
+    <footer>
+        <p>&copy; 2026 Ad-Spot. All Rights Reserved.</p>
 
         <p>
-            Browse thousands of advertisements for products and services from trusted sellers.
+            Email: info@adspot.com |
+            Phone: +254 700 000 000
         </p>
-
-        <div class="search-box">
-
-            <input
-            type="text"
-            placeholder="Search for products or services...">
-
-            <button>
-                <i class="fas fa-search"></i> Search
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--  CATEGORIES  -->
-
-<section class="categories">
-
-    <h2>Browse Categories</h2>
-
-    <div class="category-container">
-
-        <div class="category-card">
-            <i class="fas fa-car"></i>
-            <h3>Vehicles</h3>
-        </div>
-
-        <div class="category-card">
-            <i class="fas fa-home"></i>
-            <h3>Property</h3>
-        </div>
-
-        <div class="category-card">
-            <i class="fas fa-laptop"></i>
-            <h3>Electronics</h3>
-        </div>
-
-        <div class="category-card">
-            <i class="fas fa-shirt"></i>
-            <h3>Fashion</h3>
-        </div>
-
-        <div class="category-card">
-            <i class="fas fa-briefcase"></i>
-            <h3>Jobs</h3>
-        </div>
-
-        <div class="category-card">
-            <i class="fas fa-tools"></i>
-            <h3>Services</h3>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FEATURED ADS  -->
-
-<section class="featured">
-
-    <h2>Featured Advertisements</h2>
-
-    <div class="ads-container">
-
-        <div class="ad-card">
-
-            <img src="images/laptop.jpg" alt="Laptop">
-
-            <div class="ad-info">
-
-                <h3>HP EliteBook Laptop</h3>
-
-                <p class="price">$450</p>
-
-                <p>📍 Nairobi</p>
-
-                <button class="favorite-btn">
-                    ❤ Favorite
-                </button>
-
-            </div>
-
-        </div>
-
-        <div class="ad-card">
-
-            <img src="images/car.jpg" alt="Car">
-
-            <div class="ad-info">
-
-                <h3>Toyota Axio</h3>
-
-                <p class="price">$7,500</p>
-
-                <p>📍 Nakuru</p>
-
-                <button class="favorite-btn">
-                    ❤ Favorite
-                </button>
-
-            </div>
-
-        </div>
-
-        <div class="ad-card">
-
-            <img src="images/house.jpg" alt="House">
-
-            <div class="ad-info">
-
-                <h3>3 Bedroom Apartment</h3>
-
-                <p class="price">$350 / Month</p>
-
-                <p>📍 Mombasa</p>
-
-                <button class="favorite-btn">
-                    ❤ Favorite
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about-preview">
-
-    <h2>Why Choose Ad-Spot?</h2>
-
-    <p>
-
-        Ad-Spot is a trusted online marketplace that connects buyers and sellers
-        through a fast, secure, and user-friendly platform. Search thousands of
-        listings, discover amazing deals, and save your favorite advertisements
-        for later.
-
-    </p>
-
-</section>
-
-<!--  CONTACT -->
-
-<section class="contact-preview">
-
-    <h2>Need Help?</h2>
-
-    <p>Contact our support team anytime.</p>
-
-    <a href="contact.html" class="contact-btn">
-        Contact Us
-    </a>
-
-</section>
-
-<!--  FOOTER  -->
-
-<footer>
-
-    <div class="footer-content">
-
-        <h3>Ad-Spot</h3>
-
-        <p>
-            Your trusted online marketplace for products and services.
-        </p>
-
-        <div class="social-icons">
-
-            <a href="#"><i class="fab fa-facebook"></i></a>
-
-            <a href="#"><i class="fab fa-twitter"></i></a>
-
-            <a href="#"><i class="fab fa-instagram"></i></a>
-
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-
-        </div>
-
-        <p class="copyright">
-
-            © 2026 Ad-Spot. All Rights Reserved.
-
-        </p>
-
-    </div>
-
-</footer>
-
-<script src="script.js"></script>
+    </footer>
 
 </body>
 </html>
