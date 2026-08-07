@@ -16,7 +16,7 @@ https://drizzy676.github.io/ad-spot/
 
 
 ## Screenshots
-[homepage] (screenshots/home.png)
+[homepage](screenshots/home.png)
 [Browse ads](screenshots/ads.png)
 [About](screenshots/about.png)
 [contact](screenshots/contact.png)
