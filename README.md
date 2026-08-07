@@ -15,12 +15,12 @@ The project demonstrates responsive web design, client-side form validation and 
 https://drizzy676.github.io/ad-spot/
 
 
-## Screenshot 
+## Screenshots
 [homepage] (screenshots/home.png)
-[Browse ads] (screenshots/ads.png)
-[About] (screenshots/about.png)
-[contact] (screenshots/contact.png)
-[Admin Dashboard] (screenshots/admin.png)
+[Browse ads](screenshots/ads.png)
+[About](screenshots/about.png)
+[contact](screenshots/contact.png)
+[Admin Dashboard](screenshots/admin.png)
 
 ## Technologies Used
 
