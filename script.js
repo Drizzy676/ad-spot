@@ -140,7 +140,7 @@ function darkMode(){
 
             localStorage.setItem("theme","dark");
 
-            darkButton.innerHTML="☀️";
+            darkButton.innerHTML="";
 
         }
 
@@ -148,7 +148,7 @@ function darkMode(){
 
             localStorage.setItem("theme","light");
 
-            darkButton.innerHTML="🌙";
+            darkButton.innerHTML="";
 
         }
 
@@ -338,7 +338,7 @@ function saveReport(e){
 
     document.getElementById("form-status").innerHTML=
 
-    "✅ Report submitted successfully.";
+    " Report submitted successfully.";
 
     form.reset();
 
