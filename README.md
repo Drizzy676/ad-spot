@@ -154,7 +154,7 @@ This project demonstrates:
 |------|------|
 | Leo Mwikia | Scrum Master |
 | Jethro | Front-end Development |
-| Warre | Documentation & Research |
+| Warren | Documentation & Research |
 | Karen | Testing & Quality Assurance |
 | Joshua | Front-end Development |
 
